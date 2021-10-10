@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NavigationActivity">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EC8F8F"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:text="Navigation Panel"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="LOG OUT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/classLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintBottom_toTopOf="@+id/marking">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/instructorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/edit_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Instructor List:"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/edit_background"/>
+
+                    <Button
+                        android:id="@+id/addInstructor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/searchBarInstructor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:text="Search:"/>
+
+                    <EditText
+                        android:id="@+id/inputSearchInstructor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"/>
+
+                    <Button
+                        android:id="@+id/searchInstructor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SEARCH"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutInstructorSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Select:"/>
+
+                    <FrameLayout
+                        android:id="@+id/instructorSelector"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/practicalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/edit_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Practical List:"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/edit_background"/>
+
+                    <Button
+                        android:id="@+id/addPractical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADD"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:text="Select:"/>
+
+                    <FrameLayout
+                        android:id="@+id/practicalSelector"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/studentLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/edit_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Student List:"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/edit_background"/>
+
+                <Button
+                    android:id="@+id/addStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/searchBarStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="Search:"/>
+
+                <EditText
+                    android:id="@+id/inputSearchStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"/>
+
+                <Button
+                    android:id="@+id/searchStudent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEARCH"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutStudentSelector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:text="Select:"/>
+
+                <FrameLayout
+                    android:id="@+id/studentSelector"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/marking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="START MARKING"
+        app:layout_constraintTop_toBottomOf="@+id/classLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

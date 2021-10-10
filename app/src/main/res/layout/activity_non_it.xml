@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddInstructorActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#F4D26B"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="RETURN"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="@+id/title"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/changeLayout">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Full name:"/>
+
+            <EditText
+                android:id="@+id/inputFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email:"/>
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Unique username:"/>
+
+            <EditText
+                android:id="@+id/inputUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="4-Digit PIN password:"/>
+
+            <EditText
+                android:id="@+id/firstDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/secondDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/thirdDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/fourthDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Re-enter 4-Digit PIN password:"/>
+
+            <EditText
+                android:id="@+id/reFirstDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/reSecondDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/reThirdDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/reFourthDigit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/edit_background"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Country of origin:" />
+
+            <FrameLayout
+                android:id="@+id/countrySelector"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Mark Breakdown:"/>
+
+            <FrameLayout
+                android:id="@+id/markList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/changeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/add">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="EDIT" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DELETE"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="ADD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
